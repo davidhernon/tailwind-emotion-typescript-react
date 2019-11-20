@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es6", /* ECMAScript target version (default: es3) */
+    "module": "esnext", /* Module code generation */
+    "jsx": "react", /* JSX code generation */
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true, /* Interop between commonjs and esm (implies "allowSyntheticDefaultImports') */
+    "allowSyntheticDefaultImports": true, /* Allow default imports from modules with no default export */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node", /* Module resolution strategy (node or classic) */
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "types": ["@emotion/core"]
+  },
+  "include": [
+    "src"
+  ]
+}
