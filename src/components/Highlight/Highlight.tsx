@@ -60,6 +60,41 @@ const ExpandingHighlightContent = styled.div<{ rightAligned: boolean }>`
   }
 `;
 
+const HighlightContentContainer = styled.div<{ lightTheme: boolean }>`
+  color: ${({ lightTheme }) => (lightTheme ? '#28303F' : '#ffffffeb')};
+`;
+
+const HighlightDate = styled.div<{ lightTheme: boolean }>`
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: ${({ lightTheme }) => (lightTheme ? '#5d6980' : '#cbd5e0;')};
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+`;
+
+const HighlightLink = styled.a<{ lightTheme: boolean }>`
+  ${tw`mt-3`}
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: ${({ lightTheme }) => (lightTheme ? '#52779e' : '#ffd0d8')};
+`;
+
+const HighlightPointsUl = styled.ul`
+  ${tw`mt-4`}
+  padding-left: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+`;
+
+const SkillsContainer = styled.div<{ lightTheme: boolean }>`
+  ${tw`flex flex-wrap font-semibold uppercase mt-8`}
+  margin-left: -1rem;
+  line-height: 1.5rem;
+  color: ${({ lightTheme }) => (lightTheme ? '#5d6980' : '#cbd5e0;')};
+`;
+
 const targetRefDeps = (
   targetRef: React.MutableRefObject<null | HTMLDivElement>,
 ): [React.MutableRefObject<null | HTMLDivElement>, 0 | number] => {
@@ -142,23 +177,8 @@ export const Highlight: React.FC<{
             ${tw`p-8`}
           `}
         >
-          <div
-            css={css`
-              color: ${color === 'light' ? '#28303F' : '#ffffffeb'};
-            `}
-          >
-            <div
-              css={css`
-                text-transform: uppercase;
-                font-size: 0.875rem;
-                font-weight: 600;
-                color: ${color === 'light' ? '#5d6980' : '#cbd5e0;'};
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-              `}
-            >
-              {date}
-            </div>
+          <HighlightContentContainer lightTheme={color === 'light'}>
+            <HighlightDate lightTheme={color === 'light'}>{date}</HighlightDate>
             <div
               css={css`
                 ${tw`text-4xl font-semibold mt-2`}
@@ -167,35 +187,17 @@ export const Highlight: React.FC<{
               {title}
             </div>
             {link && (
-              <a
-                css={css`
-                  ${tw`mt-3`}
-                  font-size: 0.8rem;
-                  font-weight: 700;
-                  text-transform: uppercase;
-                  color: ${color === 'light' ? '#52779e' : '#ffd0d8'};
-                  &: visited {
-                    color: ${color === 'light' ? '#52779e' : '#ffd0d8'};
-                  }
-                  &: hover {
-                  }
-                `}
+              <HighlightLink
+                lightTheme={color === 'light'}
                 rel="noopener noreferrer"
                 target="_blank"
                 href={link}
               >
                 {linkTitle ? linkTitle : link}
-              </a>
+              </HighlightLink>
             )}
 
-            <ul
-              css={css`
-                ${tw`mt-4`}
-                padding-left: 1.1rem;
-                font-weight: 600;
-                line-height: 1.4;
-              `}
-            >
+            <HighlightPointsUl>
               {points.map(point => (
                 <li
                   css={css`
@@ -205,15 +207,8 @@ export const Highlight: React.FC<{
                   {point}
                 </li>
               ))}
-            </ul>
-            <div
-              css={css`
-                ${tw`flex flex-wrap font-semibold uppercase mt-8`}
-                margin-left: -1rem;
-                line-height: 1.5rem;
-                color: ${color === 'light' ? '#5d6980' : '#cbd5e0;'};
-              `}
-            >
+            </HighlightPointsUl>
+            <SkillsContainer lightTheme={color === 'light'}>
               {skills.map(skill => (
                 <div
                   css={css`
@@ -223,8 +218,8 @@ export const Highlight: React.FC<{
                   {skill}
                 </div>
               ))}
-            </div>
-          </div>
+            </SkillsContainer>
+          </HighlightContentContainer>
         </div>
       </ExpandingHighlightContent>
     </HighlightContainer>
