@@ -69,6 +69,14 @@ const CreditHeadline = styled.div`
   ${tw`text-sm font-semibold text-gray-400 uppercase tracking-wider`}
 `;
 
+const ContinueSVG = styled.div`
+  ${tw`absolute`}
+  top: 0px;
+  @media screen and (max-width: 1024px) {
+    left: 50%;
+  }
+`;
+
 export const Hero = () => {
   return (
     <HeroImageOuterContainer>
@@ -150,17 +158,7 @@ export const Hero = () => {
             </div>
           </div>
         </HeroCTAContainer>
-        <div
-          css={css`
-            color: hotpink;
-            ${tw`absolute`}
-            top: 0px;
-            @media screen and (max-width: 1024px) {
-              left: 50%;
-            }
-          `}
-          onClick={() => window.scrollBy(0, 500)}
-        >
+        <ContinueSVG>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
@@ -173,7 +171,7 @@ export const Hero = () => {
             />
             <path d="M0 0h24v24H0z" fill="none" />
           </svg>
-        </div>
+        </ContinueSVG>
       </HeroContainer>
     </HeroImageOuterContainer>
   );

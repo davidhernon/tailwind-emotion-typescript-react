@@ -1,11 +1,22 @@
 import * as React from 'react';
 import css from '@emotion/css';
+import styled from '@emotion/styled';
 import tw from 'tailwind.macro';
 
 export enum HighlightAlignment {
   Right,
   Left,
 }
+
+// eslint-disable-next-line
+const HighlightContainer = styled.div<{
+  rightAligned: boolean;
+  lightTheme: boolean;
+}>`${tw`flex items-center`}
+  ${({ rightAligned }) => rightAligned && 'flex-direction: row-reverse;'}
+  background-color: ${({ lightTheme }) =>
+    lightTheme ? '#ffffffeb' : '#28303F'}
+`;
 
 const targetRefDeps = (
   targetRef: React.MutableRefObject<null | HTMLDivElement>,
@@ -38,10 +49,8 @@ export const Highlight: React.FC<{
   skills,
 }) => {
   const targetRef = React.useRef<null | HTMLDivElement>(null);
-  // @ts-ignore
   const [contentHeight, setContentHeight] = React.useState(450);
   React.useLayoutEffect(() => {
-    console.log('layout');
     try {
       if (targetRef === null || targetRef.current === null) {
         return;
@@ -63,12 +72,9 @@ export const Highlight: React.FC<{
   });
 
   return (
-    <div
-      css={css`
-      ${tw`flex items-center`}
-      ${align === HighlightAlignment.Right && 'flex-direction: row-reverse;'}
-      background-color: ${color === 'light' ? '#ffffffeb' : '#28303F'};
-    `}
+    <HighlightContainer
+      rightAligned={align === HighlightAlignment.Right}
+      lightTheme={color === 'light'}
     >
       <div
         css={css`
@@ -216,6 +222,6 @@ export const Highlight: React.FC<{
           </div>
         </div>
       </div>
-    </div>
+    </HighlightContainer>
   );
 };
