@@ -30,7 +30,7 @@ export const Highlights = () => {
         color={'light'}
         date="August 2015 - November 2016"
         title="Lead-Web"
-        companyImageUrl="%PUBLIC_URL%/assets/Subtract.png"
+        companyImageUrl="https://raw.githubusercontent.com/davidhernon/tailwind-emotion-typescript-react/master/public/assets/lead-web.png"
         link="https://www.lead-web.com"
         linkTitle="www.lead-web.com"
         points={[
