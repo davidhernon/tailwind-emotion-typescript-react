@@ -18,6 +18,48 @@ const HighlightContainer = styled.div<{
     lightTheme ? '#ffffffeb' : '#28303F'}
 `;
 
+// eslint-disable-next-line
+const HighlightBackgroundImageContainer = styled.div<{
+  rightAligned: boolean;
+  contentHeight: number;
+}>`
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDEyIiBoZWlnaHQ9IjEwMDkiIHZpZXdCb3g9IjAgMCA0MTIgMTAwOSIgZmls%0D%0AbD0ibm9uZSIgCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBh%0D%0AdGggZD0iTTI0NyAwSDBWMTAwOUg0MTJMMjQ3IDBaIiBmaWxsPSIjRUZGMUY2Ii8+Cjwvc3ZnPgo=);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 775px) {
+    ${({ contentHeight }) => `height: ${contentHeight}px`}
+  }
+  align-items: center;
+  ${({ rightAligned }) => rightAligned && 'transform: scaleX(-1);'}
+  ${tw`absolute w-2/5 hidden lg:flex xl:flex`}
+`;
+
+const LargeAlignedImage = styled.img<{ rightAligned: boolean }>`
+  height: 177px;
+  max-width: 295px;
+  margin-left: 30%;
+  ${({ rightAligned }) => rightAligned && 'transform: scaleX(-1);'}
+`;
+
+const MediumAlignedImage = styled.img<{ rightAligned: boolean }>`
+  ${tw`hidden md:flex lg:hidden`}
+  height: 177px;
+  max-width: 295px;
+
+  ${({ rightAligned }) =>
+    rightAligned ? 'margin-right: 2rem' : 'margin-left: 2rem'}
+`;
+
+const ExpandingHighlightContent = styled.div<{ rightAligned: boolean }>`
+  flex-grow: 1;
+  max-width: 100vw;
+  overflow-x: hidden;
+  @media screen and (min-width: 1024px) {
+    ${({ rightAligned }) =>
+      rightAligned ? 'padding-right: 40%' : `padding-left: 40%;`}
+  }
+`;
+
 const targetRefDeps = (
   targetRef: React.MutableRefObject<null | HTMLDivElement>,
 ): [React.MutableRefObject<null | HTMLDivElement>, 0 | number] => {
@@ -76,65 +118,28 @@ export const Highlight: React.FC<{
       rightAligned={align === HighlightAlignment.Right}
       lightTheme={color === 'light'}
     >
-      <div
-        css={css`
-          background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDEyIiBoZWlnaHQ9IjEwMDkiIHZpZXdCb3g9IjAgMCA0MTIgMTAwOSIgZmls%0D%0AbD0ibm9uZSIgCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBh%0D%0AdGggZD0iTTI0NyAwSDBWMTAwOUg0MTJMMjQ3IDBaIiBmaWxsPSIjRUZGMUY2Ii8+Cjwvc3ZnPgo=);
-          background-size: 100% auto;
-          background-repeat: no-repeat;
-          @media screen and (min-width: 775px) {
-            height: ${contentHeight}px;
-          }
-          align-items: center;
-          ${align === HighlightAlignment.Right && 'transform: scaleX(-1);'}
-          ${tw`absolute w-2/5 hidden lg:flex xl:flex`}
-        `}
+      <HighlightBackgroundImageContainer
+        rightAligned={align === HighlightAlignment.Right}
+        contentHeight={contentHeight}
       >
-        <img
+        <LargeAlignedImage
+          rightAligned={align === HighlightAlignment.Right}
           alt="company"
-          css={css`
-            height: 177px;
-            max-width: 295px;
-            margin-left: 30%;
-            ${align === HighlightAlignment.Right && 'transform: scaleX(-1);'}
-          `}
           src={companyImageUrl}
         />
-      </div>
-      <img
+      </HighlightBackgroundImageContainer>
+      <MediumAlignedImage
         alt="company"
-        css={css`
-          height: 177px;
-          max-width: 295px;
-          ${tw`hidden md:flex lg:hidden`}
-
-          ${align === HighlightAlignment.Right
-            ? 'margin-right: 2rem'
-            : 'margin-left: 2rem'}
-        `}
+        rightAligned={align === HighlightAlignment.Right}
         src={companyImageUrl}
       />
-      <div
+      <ExpandingHighlightContent
+        rightAligned={align === HighlightAlignment.Right}
         ref={targetRef}
-        css={css`
-          flex-grow: 1;
-          max-width: 100vw;
-          overflow-x: hidden;
-          @media screen and (min-width: 700px) {
-          }
-          @media screen and (min-width: 775px) {
-          }
-          @media screen and (min-width: 820px) {
-          }
-          @media screen and (min-width: 1024px) {
-            ${align === HighlightAlignment.Right
-              ? 'padding-right: 40%'
-              : `padding-left: 40%;`}
-          }
-        `}
       >
         <div
           css={css`
-            padding: 2rem;
+            ${tw`p-8`}
           `}
         >
           <div
@@ -221,7 +226,7 @@ export const Highlight: React.FC<{
             </div>
           </div>
         </div>
-      </div>
+      </ExpandingHighlightContent>
     </HighlightContainer>
   );
 };
