@@ -30,7 +30,7 @@ export const Highlights = () => {
         color={'light'}
         date="August 2015 - November 2016"
         title="Lead-Web"
-        companyImageUrl="https://raw.githubusercontent.com/davidhernon/tailwind-emotion-typescript-react/master/public/assets/lead-web.png"
+        companyImageUrl="https://raw.githubusercontent.com/davidhernon/tailwind-emotion-typescript-react/master/public/assets/vibrant-lead-web.png"
         link="https://www.lead-web.com"
         linkTitle="www.lead-web.com"
         points={[
@@ -43,7 +43,7 @@ export const Highlights = () => {
       />
       <Highlight
         align={HighlightAlignment.Left}
-        companyImageUrl="https://yt3.ggpht.com/-AiFQ5py0OMc/AAAAAAAAAAI/AAAAAAAAAAA/oUV0AKCwo4o/s68-c-k-no-mo-rj-c0xffffff/photo.jpg"
+        companyImageUrl="https://raw.githubusercontent.com/davidhernon/tailwind-emotion-typescript-react/master/public/assets/larger-silent-disco-squad.png"
         color={'dark'}
         date="August 2013 - November 2015"
         title="Silent Disco Squad"
@@ -69,7 +69,7 @@ export const Highlights = () => {
       />
       <Highlight
         color={'light'}
-        companyImageUrl="https://www.nuance.com/etc/clientlibs/nuance/images/assets/nuance-logo-129x26.png"
+        companyImageUrl="https://raw.githubusercontent.com/davidhernon/tailwind-emotion-typescript-react/master/public/assets/nuance-logo.png"
         date="August 2013 - November 2014"
         title="Nuance Communications"
         points={[
