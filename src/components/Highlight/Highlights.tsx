@@ -43,7 +43,7 @@ export const Highlights = () => {
       />
       <Highlight
         align={HighlightAlignment.Left}
-        companyImageUrl="https://raw.githubusercontent.com/davidhernon/tailwind-emotion-typescript-react/master/public/assets/larger-silent-disco-squad.png"
+        companyImageUrl="https://raw.githubusercontent.com/davidhernon/tailwind-emotion-typescript-react/master/public/assets/sds-logo.png"
         color={'dark'}
         date="August 2013 - November 2015"
         title="Silent Disco Squad"
