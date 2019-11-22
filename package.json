@@ -1,5 +1,5 @@
 {
-  "name": "react-starter",
+  "name": "tailwind-emotion-typescript-react",
   "version": "0.4.3",
   "private": true,
   "description": "Solutions for React + TypeScript + emotion + tailwindcss.",
@@ -26,14 +26,14 @@
     ]
   },
   "repository": "https://github.com/.git",
-  "homepage": "http://localhost:5002",
+  "homepage": "https://davidhernon.github.io/tailwind-emotion-typescript-react/",
   "keywords": [
     "React",
     "TypeScript",
     "emotion",
     "tailwindcss"
   ],
-  "author": "",
+  "author": "davidhernon",
   "license": "WTFPL",
   "dependencies": {
     "@types/jest": "^24.0.18",
