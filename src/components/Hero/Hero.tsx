@@ -12,19 +12,22 @@ const SideImage = styled.div`
   height:100%;
   max-height: 100vh;
   width: 100%;
-  background-size: 50% auto;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   @media screen and (max-width: 1280px) {
-    background-size: 50% 100%;
+    background-size: 100% 130%;
   }
   background-image: url(https://images.unsplash.com/photo-1503198515498-d0bd9ed16902?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
 `;
 
-const HeroContainer = styled.div`
+const HeroContainer = styled.div<{ backgroundXTranslate?: number }>`
   ${tw`relative lg:min-h-screen xl:min-h-screen lg:min-w-3xl xl:min-w-4xl lg:flex lg:items-center lg:justify-center lg:w-3/5 lg:pl-8 lg:pr-8 bg-no-repeat `}
   background-image: url(https://svgshare.com/i/G3y.svg);
   background-size: 200% auto;
   transform: scaleY(-1);
   @media screen and (min-width: 1024px) {
+    transform: ${({ backgroundXTranslate = 0 }) =>
+      `translate3d(${backgroundXTranslate}px, 0px, 0px) scaleY(-1);`} 
     background-size: 100% auto;
     min-height: calc(100vh + 6px);
     bottom: 2px;
@@ -62,7 +65,7 @@ const SmallerScreenBackground = styled.div`
   background-size: 100% auto;
   background-image: url(https://images.unsplash.com/photo-1503198515498-d0bd9ed16902?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
   background-position: 0px -300px;
-  ${tw`absolute`}
+  background-repeat: no-repeat ${tw`absolute`};
 `;
 
 const CreditHeadline = styled.div`

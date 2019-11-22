@@ -43,7 +43,7 @@ export const Highlights = () => {
       />
       <Highlight
         align={HighlightAlignment.Left}
-        companyImageUrl="https://raw.githubusercontent.com/davidhernon/tailwind-emotion-typescript-react/master/public/assets/sds-logo.png"
+        companyImageUrl="https://i.imgur.com/s918Tfr.png"
         color={'dark'}
         date="August 2013 - November 2015"
         title="Silent Disco Squad"
@@ -69,7 +69,7 @@ export const Highlights = () => {
       />
       <Highlight
         color={'light'}
-        companyImageUrl="https://raw.githubusercontent.com/davidhernon/tailwind-emotion-typescript-react/master/public/assets/nuance-logo.png"
+        companyImageUrl="https://i.imgur.com/4WgInYi.png"
         date="August 2013 - November 2014"
         title="Nuance Communications"
         points={[
