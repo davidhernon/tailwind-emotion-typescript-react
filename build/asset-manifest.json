@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/tailwind-emotion-typescript-react/static/css/main.ef24b163.chunk.css",
-    "main.js": "/tailwind-emotion-typescript-react/static/js/main.f71cea39.chunk.js",
-    "main.js.map": "/tailwind-emotion-typescript-react/static/js/main.f71cea39.chunk.js.map",
+    "main.js": "/tailwind-emotion-typescript-react/static/js/main.5f932c14.chunk.js",
+    "main.js.map": "/tailwind-emotion-typescript-react/static/js/main.5f932c14.chunk.js.map",
     "runtime-main.js": "/tailwind-emotion-typescript-react/static/js/runtime-main.c62df17f.js",
     "runtime-main.js.map": "/tailwind-emotion-typescript-react/static/js/runtime-main.c62df17f.js.map",
     "static/js/2.f80d5485.chunk.js": "/tailwind-emotion-typescript-react/static/js/2.f80d5485.chunk.js",
     "static/js/2.f80d5485.chunk.js.map": "/tailwind-emotion-typescript-react/static/js/2.f80d5485.chunk.js.map",
     "index.html": "/tailwind-emotion-typescript-react/index.html",
-    "precache-manifest.9b8ec257421e142a882fc8b496b1e922.js": "/tailwind-emotion-typescript-react/precache-manifest.9b8ec257421e142a882fc8b496b1e922.js",
+    "precache-manifest.4aaf9b44855078ef2f32779583face31.js": "/tailwind-emotion-typescript-react/precache-manifest.4aaf9b44855078ef2f32779583face31.js",
     "service-worker.js": "/tailwind-emotion-typescript-react/service-worker.js",
     "static/css/main.ef24b163.chunk.css.map": "/tailwind-emotion-typescript-react/static/css/main.ef24b163.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.c62df17f.js",
     "static/js/2.f80d5485.chunk.js",
     "static/css/main.ef24b163.chunk.css",
-    "static/js/main.f71cea39.chunk.js"
+    "static/js/main.5f932c14.chunk.js"
   ]
 }
