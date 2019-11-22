@@ -118,12 +118,21 @@ export const Hero = () => {
       <SideImage />
       <animated.div
         style={{
+          display: contentWidth > 1023 ? 'flex' : 'auto',
           transform:
             contentWidth < 1010
               ? 'translate3d(0,0,0)'
-              : x.interpolate(x => `translate3d(${x}px, 0, 0)`),
+              : x.interpolate(x => {
+                  const offset = contentWidth > 1023 ? 50 : 0;
+                  return `translate3d(${x - offset}px, 0, 0)`;
+                }),
         }}
       >
+        {contentWidth > 1023 && (
+          <div
+            style={{ width: '50px', height: '100vh', background: '#2F3747' }}
+          ></div>
+        )}
         <HeroContainer>
           <HeroCTAContainer>
             <HeroTextContainer>
@@ -140,7 +149,7 @@ export const Hero = () => {
                         : x.interpolate(x => `translate3d(${x}px, 0, 0)`),
                   }}
                 >
-                  <HeadlineLabel>Available Now</HeadlineLabel>
+                  <HeadlineLabel></HeadlineLabel>
                   <Headline>Software Engineer, curious artist</Headline>
                   <SubHeadline>
                     I build web apps and applications that connect people and
