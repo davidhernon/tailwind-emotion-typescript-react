@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "66a785540524d07daf529439ec6fa591",
+    "revision": "f726524ef1107b6a8e167b7cd90f34d6",
     "url": "/tailwind-emotion-typescript-react/index.html"
   },
   {
-    "revision": "15ece2bc7623faf96f0a",
+    "revision": "ba3a86f63045fc20299d",
     "url": "/tailwind-emotion-typescript-react/static/css/main.ef24b163.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tailwind-emotion-typescript-react/static/js/2.f80d5485.chunk.js"
   },
   {
-    "revision": "15ece2bc7623faf96f0a",
-    "url": "/tailwind-emotion-typescript-react/static/js/main.f71cea39.chunk.js"
+    "revision": "ba3a86f63045fc20299d",
+    "url": "/tailwind-emotion-typescript-react/static/js/main.5f932c14.chunk.js"
   },
   {
     "revision": "e691fb413f6eeae3cd89",
