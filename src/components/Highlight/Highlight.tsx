@@ -174,7 +174,7 @@ export const Highlight: React.FC<{
       >
         <div
           css={css`
-            ${tw`p-8`}
+            ${tw`p-8 xl:pl-24`}
           `}
         >
           <HighlightContentContainer lightTheme={color === 'light'}>

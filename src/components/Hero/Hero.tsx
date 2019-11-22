@@ -18,7 +18,7 @@ const SideImage = styled.div`
   background-size: 100% auto;
   background-repeat: no-repeat;
   @media screen and (max-width: 1280px) {
-    background-size: 100% 130%;
+    background-size: 100% 250%;
   }
   background-image: url(https://images.unsplash.com/photo-1503198515498-d0bd9ed16902?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
 `;
@@ -70,6 +70,10 @@ const SmallerScreenBackground = styled.div`
   background-image: url(https://images.unsplash.com/photo-1503198515498-d0bd9ed16902?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
   background-position: 0px -300px;
   background-repeat: no-repeat ${tw`absolute`};
+  @media screen and (max-width: 600px) {
+    background-size: 100% 300%;
+    background-position: 0 0;
+  }
 `;
 
 const CreditHeadline = styled.div`
