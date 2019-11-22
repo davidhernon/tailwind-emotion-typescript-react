@@ -36,6 +36,7 @@ export const Links = ({
       {links.map(
         ({ icon = <CheckmarkIcon iconColor="#a0e0da" />, title, url }) => (
           <a
+            key={title}
             css={css`
               ${tw`flex flex-col items-center no-underline p-4 rounded-lg`}
               font-size: 0.8rem;

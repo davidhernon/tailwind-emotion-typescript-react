@@ -95,7 +95,7 @@ const SkillsContainer = styled.div<{ lightTheme: boolean }>`
   color: ${({ lightTheme }) => (lightTheme ? '#5d6980' : '#cbd5e0;')};
 `;
 
-const targetRefDeps = (
+export const targetRefDeps = (
   targetRef: React.MutableRefObject<null | HTMLDivElement>,
 ): [React.MutableRefObject<null | HTMLDivElement>, 0 | number] => {
   if (targetRef !== null && targetRef.current !== null) {
@@ -200,6 +200,7 @@ export const Highlight: React.FC<{
             <HighlightPointsUl>
               {points.map(point => (
                 <li
+                  key={point}
                   css={css`
                     ${tw`text-lg max-w-xl lg:text-lg`}
                   `}
@@ -211,6 +212,7 @@ export const Highlight: React.FC<{
             <SkillsContainer lightTheme={color === 'light'}>
               {skills.map(skill => (
                 <div
+                  key={skill}
                   css={css`
                     ${tw`pl-4 pr-4`}
                   `}
