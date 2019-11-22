@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-emotion-typescript-react",
+  "name": "",
   "version": "0.4.3",
   "private": true,
   "description": "Solutions for React + TypeScript + emotion + tailwindcss.",
@@ -26,7 +26,6 @@
     ]
   },
   "repository": "https://github.com/.git",
-  "homepage": "https://davidhernon.github.io/tailwind-emotion-typescript-react/",
   "keywords": [
     "React",
     "TypeScript",
