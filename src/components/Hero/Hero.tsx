@@ -11,16 +11,28 @@ const HeroImageOuterContainer = styled.div`
 `;
 
 const SideImage = styled.div`
+  @keyframes scrollBackground {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 50vw -50vh;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+
   ${tw`hidden lg:block absolute`}
   height:100%;
   max-height: 100vh;
   width: 100%;
   background-size: 100% auto;
-  background-repeat: no-repeat;
   @media screen and (max-width: 1280px) {
     background-size: 100% 250%;
   }
   background-image: url(https://images.unsplash.com/photo-1503198515498-d0bd9ed16902?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+  animation: scrollBackground 120s linear infinite;
 `;
 
 const HeroContainer = styled.div`

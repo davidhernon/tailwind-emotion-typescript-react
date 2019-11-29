@@ -71,6 +71,7 @@ typings/
 __snapshots__
 
 # production
+build/
 
 # misc
 .DS_Store
