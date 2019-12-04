@@ -16,7 +16,7 @@ const SideImage = styled.div`
       background-position: 0 0;
     }
     50% {
-      background-position: 50vw -50vh;
+      background-position: 50vw -35vh;
     }
     100% {
       background-position: 0 0;
@@ -32,11 +32,11 @@ const SideImage = styled.div`
     background-size: 100% 250%;
   }
   background-image: url(https://images.unsplash.com/photo-1503198515498-d0bd9ed16902?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
-  animation: scrollBackground 120s linear infinite;
+  animation: scrollBackground 60s linear infinite;
 `;
 
 const HeroContainer = styled.div`
-  ${tw`relative lg:min-h-screen xl:min-h-screen lg:min-w-3xl xl:min-w-4xl lg:flex lg:items-center lg:justify-center lg:w-3/5 lg:pl-8 lg:pr-8 bg-no-repeat `}
+  ${tw`relative lg:min-h-screen xl:min-h-screen lg:min-w-3xl xl:min-w-4xl lg:flex lg:items-center lg:justify-center lg:w-3/5 lg:pl-8 lg:pr-8 bg-no-repeat`}
   background-image: url(https://svgshare.com/i/G3y.svg);
   background-size: 200% auto;
   transform: scaleY(-1);
@@ -53,7 +53,7 @@ const HeroCTAContainer = styled.div`
 `;
 
 const HeroTextContainer = styled.div`
-  ${tw`px-6 pt-16 pb-12 md:max-w-3xl md:mx-auto lg:max-w-full lg:pt-0`}
+  ${tw`px-6 pt-16 pb-12 lg:pt-0`}
 `;
 
 const HeadlineContainer = styled.div`
@@ -76,6 +76,17 @@ const SubHeadline = styled.p`
 `;
 
 const SmallerScreenBackground = styled.div`
+  @keyframes scrollBackground2 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 0 -50vh;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
   height: 100%;
   width: 100%;
   background-size: 100% auto;
@@ -86,6 +97,7 @@ const SmallerScreenBackground = styled.div`
     background-size: 100% 300%;
     background-position: 0 0;
   }
+  animation: scrollBackground2 60s linear infinite;
 `;
 
 const CreditHeadline = styled.div`
@@ -162,13 +174,12 @@ export const Hero = () => {
                   }}
                 >
                   <HeadlineLabel></HeadlineLabel>
-                  <Headline>Software Engineer, curious artist</Headline>
+                  <Headline>Software Engineer, Creator</Headline>
                   <SubHeadline>
-                    I build web apps and applications that connect people and
-                    inspire spontaneous interactions. I am a deeply curious
-                    maker and programmer by day. Beyond work I automate
-                    aquariums, throw events, write comedy, play drums, and go
-                    outside.
+                    I build web apps and experiences that connect people. I am a
+                    deeply curious maker and programmer by day. I also organize
+                    live events, perform comedy, play the drums, and build
+                    aquariums.
                   </SubHeadline>
                 </animated.div>
               </HeadlineContainer>
@@ -195,7 +206,7 @@ export const Hero = () => {
                   ${tw`px-6 py-8 md:max-w-3xl md:mx-auto lg:max-w-full lg:py-0`}
                 `}
               >
-                <CreditHeadline>The Portfolio Of</CreditHeadline>
+                <CreditHeadline>Portfolio Of</CreditHeadline>
                 <div
                   css={css`
                     ${tw`mt-4 sm:flex`}

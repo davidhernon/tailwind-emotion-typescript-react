@@ -2,6 +2,20 @@ import * as React from 'react';
 import css from '@emotion/css';
 import tw from 'tailwind.macro';
 import { CheckmarkIcon } from '../Examples/Examples';
+import styled from '@emotion/styled';
+
+const LinkContainer = styled.a`
+  ${tw`flex flex-col items-center no-underline p-4 rounded-lg`}
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #eeeeef;
+  width: 225px;
+  transition: background 200ms;
+  &:hover {
+    background: #485061;
+  }
+`;
 
 export const Links = ({
   links,
@@ -26,7 +40,8 @@ export const Links = ({
         ${tw`mt-2 text-center text-xl`}
       `}
     >
-      I like meeting new people in this space and collaborating, give me a shout
+      I like meeting new people in this space and collaborating. Give me a
+      shout.
     </div>
     <div
       css={css`
@@ -34,21 +49,9 @@ export const Links = ({
       `}
     >
       {links.map(
-        ({ icon = <CheckmarkIcon iconColor="#a0e0da" />, title, url }) => (
-          <a
+        ({ icon = <CheckmarkIcon iconColor="#eeeeef" />, title, url }) => (
+          <LinkContainer
             key={title}
-            css={css`
-              ${tw`flex flex-col items-center no-underline p-4 rounded-lg`}
-              font-size: 0.8rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              color: #a0e0da;
-              width: 225px;
-              transition: background 200ms;
-              &:hover {
-                background: #485061;
-              }
-            `}
             href={url}
             target="_blank"
             rel="noopener noreferrer"
@@ -61,7 +64,7 @@ export const Links = ({
             >
               {title}
             </div>
-          </a>
+          </LinkContainer>
         ),
       )}
     </div>

@@ -74,15 +74,15 @@ export const Examples = () => (
         ${tw`text-3xl font-semibold text-center`}
       `}
     >
-      More Than Online Transactions
+      A Diverse Background Of Experiences
     </div>
     <div
       css={css`
         ${tw`mt-1 text-center text-xl`}
       `}
     >
-      We have all kinds of services to help you save time and run a better
-      business.
+      I primarily build tools for the web but keeping many hobbies and interests
+      is my strength.
     </div>
     <div
       css={css`
@@ -90,20 +90,20 @@ export const Examples = () => (
       `}
     >
       <Example
-        title="Get your memory first"
-        content="You are trying to get your content from me. I have a lot ofe experience giving this content. I can give a lot more experience in the future as well too. Its a great thing. Lets do it."
+        title="Creative Roots"
+        content="Alongside technology, I play music, draw, and write. I have an eye for design and work best alongside Product Managers planning roadmaps, building tools and testing them with our users."
       />
       <Example
-        title="Get your memory first"
-        content="You are trying to get your content from me. I have a lot ofe experience giving this content. I can give a lot more experience in the future as well too. Its a great thing. Lets do it."
+        title="Strong Communication"
+        content="I've led teams, been a Scrum Master, and worked between end users and project managers to build effective features."
       />
       <Example
-        title="Get your memory first"
-        content="You are trying to get your content from me. I have a lot ofe experience giving this content. I can give a lot more experience in the future as well too. Its a great thing. Lets do it."
+        title="Technically Minded"
+        content="I studied Software Engineering, founded and led the tech team for a startup, and have worked on software products for the last five years."
       />
       <Example
-        title="Get your memory first"
-        content="You are trying to get your content from me. I have a lot ofe experience giving this content. I can give a lot more experience in the future as well too. Its a great thing. Lets do it."
+        title="Self Reliant"
+        content="I deliver on my goals whether its releasing products, booking national tours for bands I played in, throwing community dance parties and comedy nights. "
       />
     </div>
   </div>

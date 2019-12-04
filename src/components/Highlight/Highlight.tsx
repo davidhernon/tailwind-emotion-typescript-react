@@ -78,7 +78,7 @@ const HighlightLink = styled.a<{ lightTheme: boolean }>`
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: ${({ lightTheme }) => (lightTheme ? '#52779e' : '#ffd0d8')};
+  color: ${({ lightTheme }) => (lightTheme ? '#52779e' : '#8fb6d7')};
 `;
 
 const HighlightPointsUl = styled.ul`

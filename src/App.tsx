@@ -20,8 +20,8 @@ export const App: React.FC = () => {
           },
           { title: 'Github', url: 'https://github.com/davidhernon' },
           {
-            title: 'david.hernon1',
-            url: 'mailto:david.hernon1+personalwebsite@gmail.com',
+            title: 'Email',
+            url: 'mailto:david.hernon1+portfolio@gmail.com',
           },
         ]}
       />
