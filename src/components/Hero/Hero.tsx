@@ -169,7 +169,7 @@ export const Hero = () => {
           ></div>
         )}
         <HeroContainer
-          style={{ width: contentWidth < 1010 ? contentWidth : 'auto' }}
+          style={{ width: contentWidth < 1010 ? contentWidth : undefined }}
         >
           <HeroCTAContainer>
             <HeroTextContainer>
