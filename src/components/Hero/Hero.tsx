@@ -136,7 +136,18 @@ export const Hero = () => {
     } catch (e) {}
     // eslint-disable-next-line
   }, targetRefDeps(targetRef)); // you should pass an array literal so that tslint can tell you if your deps are wrong, instead I need to optionally return a clientHeight or 0 when its not available
-  console.log(contentWidth);
+
+  React.useEffect(() => {
+    window.addEventListener('resize', () => {
+      try {
+        if (targetRef === null || targetRef.current === null) {
+          return;
+        }
+        setContentWidth(targetRef.current.clientWidth);
+      } catch (e) {}
+    });
+  });
+
   return (
     <HeroImageOuterContainer ref={targetRef}>
       <SideImage />
@@ -157,7 +168,9 @@ export const Hero = () => {
             style={{ width: '50px', height: '100vh', background: '#2F3747' }}
           ></div>
         )}
-        <HeroContainer>
+        <HeroContainer
+          style={{ width: contentWidth < 1010 ? contentWidth : 'auto' }}
+        >
           <HeroCTAContainer>
             <HeroTextContainer>
               <HeadlineContainer>
