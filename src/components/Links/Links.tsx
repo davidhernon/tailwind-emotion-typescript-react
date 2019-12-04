@@ -45,7 +45,7 @@ export const Links = ({
     </div>
     <div
       css={css`
-        ${tw`flex justify-around pt-8 pb-16 px-32`}
+        ${tw`flex justify-around pt-8 pb-8 px-32`}
       `}
     >
       {links.map(
