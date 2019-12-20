@@ -30,7 +30,7 @@ export const Highlights = () => {
         color={'light'}
         date="August 2015 - November 2016"
         title="Lead-Web"
-        companyImageUrl="https://raw.githubusercontent.com/davidhernon/tailwind-emotion-typescript-react/master/public/assets/vibrant-lead-web.png"
+        companyImageUrl={`${process.env.PUBLIC_URL}/assets/vibrant-lead-web.png`}
         link="https://www.lead-web.com"
         linkTitle="www.lead-web.com"
         points={[
@@ -43,7 +43,7 @@ export const Highlights = () => {
       />
       <Highlight
         align={HighlightAlignment.Left}
-        companyImageUrl="https://i.imgur.com/s918Tfr.png"
+        companyImageUrl={`${process.env.PUBLIC_URL}/assets/sds-logo.png`}
         color={'dark'}
         date="August 2013 - November 2015"
         title="Silent Disco Squad"
@@ -69,9 +69,11 @@ export const Highlights = () => {
       />
       <Highlight
         color={'light'}
-        companyImageUrl="https://i.imgur.com/4WgInYi.png"
+        companyImageUrl={`${process.env.PUBLIC_URL}/assets/nuance.png`}
         date="August 2013 - November 2014"
         title="Nuance Communications"
+        link="https://www.nuance.com/index.html"
+        linkTitle="wwww.nuance.com"
         points={[
           'QA Software Engineering Intern',
           'Automated and Analyzed the Weekly Load Test',

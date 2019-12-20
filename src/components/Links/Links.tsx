@@ -33,15 +33,7 @@ export const Links = ({
         ${tw`pt-8 text-3xl font-semibold text-center`}
       `}
     >
-      Lets Get In Touch
-    </div>
-    <div
-      css={css`
-        ${tw`mt-2 text-center text-xl`}
-      `}
-    >
-      I like meeting new people in this space and collaborating. Give me a
-      shout.
+      Let's Get In Touch
     </div>
     <div
       css={css`

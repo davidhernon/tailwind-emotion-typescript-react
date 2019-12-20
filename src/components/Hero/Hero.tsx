@@ -37,7 +37,9 @@ const SideImage = styled.div`
 
 const HeroContainer = styled.div`
   ${tw`relative lg:min-h-screen xl:min-h-screen lg:min-w-3xl xl:min-w-4xl lg:flex lg:items-center lg:justify-center lg:w-3/5 lg:pl-8 lg:pr-8 bg-no-repeat`}
-  background-image: url(https://svgshare.com/i/G3y.svg);
+  background-image: url(${
+    process.env.PUBLIC_URL
+  }/assets/background-triangle.svg);
   background-size: 200% auto;
   transform: scaleY(-1);
   @media screen and (min-width: 1024px) {
@@ -100,11 +102,12 @@ const SmallerScreenBackground = styled.div`
   animation: scrollBackground2 60s linear infinite;
 `;
 
-const CreditHeadline = styled.div`
-  ${tw`text-sm font-semibold text-gray-400 uppercase tracking-wider`}
-`;
+// const CreditHeadline = styled.div`
+//   ${tw`text-sm font-semibold text-gray-400 uppercase tracking-wider`}
+// `;
 
-const ContinueSVG = styled.div`
+const ContinueSVG = styled.a`
+  cursor: pointer;
   ${tw`absolute`}
   top: 0px;
   @media screen and (max-width: 1024px) {
@@ -219,7 +222,7 @@ export const Hero = () => {
                   ${tw`px-6 py-8 md:max-w-3xl md:mx-auto lg:max-w-full lg:py-0`}
                 `}
               >
-                <CreditHeadline>Portfolio Of</CreditHeadline>
+                {/* <CreditHeadline>Portfolio Of</CreditHeadline> */}
                 <div
                   css={css`
                     ${tw`mt-4 sm:flex`}
@@ -271,7 +274,7 @@ export const Hero = () => {
               </div>
             </animated.div>
           </HeroCTAContainer>
-          <ContinueSVG>
+          <ContinueSVG href="/#background">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
