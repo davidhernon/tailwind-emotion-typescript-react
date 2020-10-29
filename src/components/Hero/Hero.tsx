@@ -4,6 +4,26 @@ import tw from 'tailwind.macro';
 import css from '@emotion/css';
 import { useSpring, animated, config } from 'react-spring';
 import { targetRefDeps } from '../Highlight/Highlight';
+import { keyframes } from '@emotion/core';
+
+const pulse = keyframes`
+
+0% {
+  box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.5)
+}
+
+  50% {
+    box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.5)
+  }
+
+  75% {
+    box-shadow: 0px 0px 0px 10px rgba(255,255,255,0.0)
+  }
+
+  100% {
+    box-shadow: 0px 0px 0px 10px rgba(255,255,255,0.0)
+  }
+`;
 
 const HeroImageOuterContainer = styled.div`
   overflow: hidden;
@@ -37,9 +57,8 @@ const SideImage = styled.div`
 
 const HeroContainer = styled.div`
   ${tw`relative lg:min-h-screen xl:min-h-screen lg:min-w-3xl xl:min-w-4xl lg:flex lg:items-center lg:justify-center lg:w-3/5 lg:pl-8 lg:pr-8 bg-no-repeat`}
-  background-image: url(${
-    process.env.PUBLIC_URL
-  }/assets/background-triangle.svg);
+  background-image: url(${process.env
+    .PUBLIC_URL}/assets/background-triangle.svg);
   background-size: 200% auto;
   transform: scaleY(-1);
   @media screen and (min-width: 1024px) {
@@ -55,7 +74,7 @@ const HeroCTAContainer = styled.div`
 `;
 
 const HeroTextContainer = styled.div`
-  ${tw`px-6 pt-16 pb-12 lg:pt-0`}
+  ${tw`px-6 pt-16 pb-8 lg:pt-0`}
 `;
 
 const HeadlineContainer = styled.div`
@@ -74,7 +93,8 @@ const Headline = styled.h1`
 `;
 
 const SubHeadline = styled.p`
-  ${tw`mt-3 text-lg max-w-xl lg:max-w-3xl text-gray-400 xl:text-2xl`}
+  ${tw`text-gray-400 mt-3 text-lg max-w-xl lg:max-w-3xl xl:text-2xl`}
+  line-height: 1.25;
 `;
 
 const SmallerScreenBackground = styled.div`
@@ -102,14 +122,22 @@ const SmallerScreenBackground = styled.div`
   animation: scrollBackground2 60s linear infinite;
 `;
 
-// const CreditHeadline = styled.div`
-//   ${tw`text-sm font-semibold text-gray-400 uppercase tracking-wider`}
-// `;
+const CTAContainer = styled.div`
+  ${tw`flex w-1/3 pt-6 mt-1`}
+`;
+
+const CTA = styled.a`
+  ${tw`p-2 rounded bg-gray-300`}
+  &:hover {
+    cursor: pointer;
+    ${tw`bg-blue-200`}
+  }
+`;
 
 const ContinueSVG = styled.a`
   cursor: pointer;
   ${tw`absolute`}
-  top: 0px;
+  top: 10px;
   @media screen and (max-width: 1024px) {
     left: 50%;
   }
@@ -157,13 +185,7 @@ export const Hero = () => {
       <animated.div
         style={{
           display: contentWidth > 1023 ? 'flex' : 'auto',
-          transform:
-            contentWidth < 1010
-              ? 'translate3d(0,0,0)'
-              : x.interpolate(x => {
-                  const offset = contentWidth > 1023 ? 50 : 0;
-                  return `translate3d(${x - offset}px, 0, 0)`;
-                }),
+          transform: 'translate3d(0,0,0)',
         }}
       >
         {contentWidth > 1023 && (
@@ -182,21 +204,23 @@ export const Hero = () => {
                     opacity:
                       contentWidth < 1010
                         ? '1'
-                        : opacity.interpolate(o => `${o}`),
+                        : opacity.interpolate((o) => `${o}`),
                     transform:
                       contentWidth < 1010
                         ? 'translate3d(0,0,0)'
-                        : x.interpolate(x => `translate3d(${x}px, 0, 0)`),
+                        : x.interpolate((x) => `translate3d(${x}px, 0, 0)`),
                   }}
                 >
                   <HeadlineLabel></HeadlineLabel>
-                  <Headline>Software Engineer, Creator</Headline>
+                  <Headline>User Centered Engineer</Headline>
                   <SubHeadline>
-                    I build web apps and experiences that connect people. I am a
-                    deeply curious maker and programmer by day. I also organize
-                    live events, perform comedy, play the drums, and build
-                    aquariums.
+                    David Hernon is an entrepreuner and creator currently
+                    designing software tools to build chatbots at scale.
                   </SubHeadline>
+                  <CTAContainer>
+                    <CTA>Resume</CTA>
+                    <CTA style={{ marginLeft: '1rem' }}>Contact</CTA>
+                  </CTAContainer>
                 </animated.div>
               </HeadlineContainer>
             </HeroTextContainer>
@@ -210,11 +234,13 @@ export const Hero = () => {
             <animated.div
               style={{
                 opacity:
-                  contentWidth < 1010 ? '1' : opacity.interpolate(o => `${o}`),
+                  contentWidth < 1010
+                    ? '1'
+                    : opacity.interpolate((o) => `${o}`),
                 transform:
                   contentWidth < 1010
                     ? 'translate3d(0,0,0)'
-                    : x.interpolate(x => `translate3d(${x}px, 0, 0)`),
+                    : x.interpolate((x) => `translate3d(${x}px, 0, 0)`),
               }}
             >
               <div
@@ -222,10 +248,9 @@ export const Hero = () => {
                   ${tw`px-6 py-8 md:max-w-3xl md:mx-auto lg:max-w-full lg:py-0`}
                 `}
               >
-                {/* <CreditHeadline>Portfolio Of</CreditHeadline> */}
                 <div
                   css={css`
-                    ${tw`mt-4 sm:flex`}
+                    ${tw`sm:flex`}
                   `}
                 >
                   <a
@@ -261,32 +286,33 @@ export const Hero = () => {
                       >
                         David Hernon
                       </p>
-                      <p
-                        css={css`
-                          ${tw`text-sm text-gray-500 leading-tight`}
-                        `}
-                      >
-                        Engineer, Artist
-                      </p>
                     </div>
                   </a>
                 </div>
               </div>
             </animated.div>
           </HeroCTAContainer>
+
           <ContinueSVG href="/#background">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="50"
-              height="50"
-              viewBox="0 0 24 24"
+            <div
+              css={css`
+                border-radius: 50%;
+                animation: ${pulse} infinite 4s linear;
+              `}
             >
-              <path
-                d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                fill="#5d687c"
-              />
-              <path d="M0 0h24v24H0z" fill="none" />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                  fill="#5d687c"
+                />
+                <path d="M0 0h24v24H0z" fill="none" />
+              </svg>
+            </div>
           </ContinueSVG>
         </HeroContainer>
       </animated.div>
