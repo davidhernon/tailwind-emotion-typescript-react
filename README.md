@@ -1,4 +1,6 @@
-# cra-ts-emotion-tailwind-typescript-react-solution
+# cra-ts-emotion-tailwind-typescript-react
+
+A Create React App project that offers build tools for a Tailwind/Emotion/React/TypeScript app.
 
 Originally built from another project, you can read the original readme [here](./original_README.md)
 
