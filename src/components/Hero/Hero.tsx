@@ -127,7 +127,8 @@ const CTAContainer = styled.div`
 `;
 
 const CTA = styled.a`
-  ${tw`p-2 rounded bg-gray-300`}
+  ${tw`p-2 rounded bg-gray-300 no-underline`}
+  color: #2d3748;
   &:hover {
     cursor: pointer;
     ${tw`bg-blue-200`}
@@ -218,7 +219,9 @@ export const Hero = () => {
                     designing software tools to build chatbots at scale.
                   </SubHeadline>
                   <CTAContainer>
-                    <CTA>Resume</CTA>
+                    <CTA href="https://stackoverflow.com/questions/51937086/how-do-i-link-to-local-pdf-file-in-a-create-react-app-project">
+                      Resume
+                    </CTA>
                     <CTA style={{ marginLeft: '1rem' }}>Contact</CTA>
                   </CTAContainer>
                 </animated.div>
