@@ -222,7 +222,12 @@ export const Hero = () => {
                     <CTA href="https://stackoverflow.com/questions/51937086/how-do-i-link-to-local-pdf-file-in-a-create-react-app-project">
                       Resume
                     </CTA>
-                    <CTA style={{ marginLeft: '1rem' }}>Contact</CTA>
+                    <CTA
+                      href="mailto:dmohernon@gmail.com"
+                      style={{ marginLeft: '1rem' }}
+                    >
+                      Contact
+                    </CTA>
                   </CTAContainer>
                 </animated.div>
               </HeadlineContainer>

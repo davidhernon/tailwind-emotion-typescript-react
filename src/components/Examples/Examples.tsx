@@ -82,8 +82,7 @@ export const Examples = () => (
         ${tw`mt-1 text-center text-xl`}
       `}
     >
-      I primarily build tools for the web but keeping many hobbies and interests
-      is my strength.
+      Full Stack Developer who has worn many hats
     </div>
     <div
       css={css`
@@ -91,20 +90,24 @@ export const Examples = () => (
       `}
     >
       <Example
-        title="Creative Roots"
-        content="Alongside technology, I play music, draw, and write. I have an eye for design and work best alongside Product Managers planning roadmaps, building tools and testing them with our users."
+        title="Creative"
+        content="David has experience working closely with designers and creatives. He draws on his background in writing, music, and the visual arts."
+        icon={<div css={css`${tw`flex w-full content-center justify-center`}`}><span css={css`${tw`text-3xl`}`} role="img" aria-label="self-reliant-rocket-emoji">🎨</span></div>}
       />
       <Example
-        title="Strong Communication"
-        content="I've led teams, been a Scrum Master, and worked between end users and project managers to build effective features."
+        title="Technical"
+        content="He has an interest in how programs and machines work and enjoys learning new tools. Beyond solving the problem at hand, he enjoys understanding the deeper reasons behind Why and How something works."
+        icon={<div css={css`${tw`flex w-full content-center justify-center`}`}><span css={css`${tw`text-3xl`}`} role="img" aria-label="self-reliant-rocket-emoji">🔧</span></div>}
       />
       <Example
-        title="Technically Minded"
-        content="I studied Software Engineering, founded and led the tech team for a startup, and have worked on software products for the last five years."
+        title="Communicator"
+        content="David is skilled at communicating complex problems to non-technical team members and stakeholders. He has been a team lead and scrum master and cares about getting everyone on the same page and covering all the bases."
+        icon={<div css={css`${tw`flex w-full content-center justify-center`}`}><span css={css`${tw`text-3xl`}`} role="img" aria-label="self-reliant-rocket-emoji">👋</span></div>}
       />
       <Example
         title="Self Reliant"
-        content="I deliver on my goals whether its releasing products, booking national tours for bands I played in, throwing community dance parties and comedy nights. "
+        content="Experience working on remote teams and personal projects. David has launched his own projects and shipped features from all around the world."
+        icon={<div css={css`${tw`flex w-full content-center justify-center`}`}><span css={css`${tw`text-3xl`}`} role="img" aria-label="self-reliant-rocket-emoji">🚀</span></div>}
       />
     </div>
   </div>
