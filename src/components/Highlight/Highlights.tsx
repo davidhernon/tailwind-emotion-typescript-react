@@ -11,10 +11,23 @@ export const Highlights = () => {
       `}
     >
       <Highlight
-        align={HighlightAlignment.Left}
+        align={HighlightAlignment.Right}
         color={'dark'}
+        companyImageUrl={`${process.env.PUBLIC_URL}/assets/gbr-census.svg`}
+        date="March 2020 - November 2020"
+        title="Volunteer Work and Travel"
+        link="https://greatreefcensus.org/"
+        linkTitle="www.greatreefcensus.org"
+        points={[
+          'Developed a social mapping tool that allows small groups of travelers to edit a planned route simultaneously. Used by dozens of travelers I met over the last year.',
+          'Assisted research teams in Cairns, Australia, and Townsville, Australia in the Great Barrier Reef Census. Logged 40 days of diving over two months mapping and documenting the status of the reef system.'
+        ]}
+      />
+      <Highlight
+        align={HighlightAlignment.Left}
+        color={'light'}
         companyImageUrl="https://eog08boavi-flywheel.netdna-ssl.com/wp-content/uploads/2019/07/logo.svg"
-        date="August 2016 - Present"
+        date="September 2016 - March 2020"
         title="Automat"
         link="https://www.automat.ai"
         linkTitle="www.automat.ai"
@@ -25,9 +38,9 @@ export const Highlights = () => {
         ]}
       />
       <Highlight
-        color={'light'}
-        date="August 2015 - November 2016"
-        title="Lead-Web"
+        color={'dark'}
+        date="September 2015 - September 2016"
+        title="LeadWeb"
         companyImageUrl={`${process.env.PUBLIC_URL}/assets/vibrant-lead-web.png`}
         link="https://www.lead-web.com"
         linkTitle="www.lead-web.com"
@@ -40,8 +53,8 @@ export const Highlights = () => {
       <Highlight
         align={HighlightAlignment.Left}
         companyImageUrl={`${process.env.PUBLIC_URL}/assets/sds-logo.svg`}
-        color={'dark'}
-        date="August 2013 - November 2015"
+        color={'light'}
+        date="August 2013 - September 2015"
         title="Silent Disco Squad"
         link="http://silentdiscosquad.com"
         linkTitle="www.silentdiscosquad.com"
@@ -54,9 +67,9 @@ export const Highlights = () => {
         ]}
       />
       <Highlight
-        color={'light'}
+        color={'dark'}
         companyImageUrl={`${process.env.PUBLIC_URL}/assets/nuance.png`}
-        date="August 2013 - November 2014"
+        date="September 2013 - May 2014"
         title="Nuance Communications"
         link="https://www.nuance.com/index.html"
         linkTitle="wwww.nuance.com"
@@ -64,6 +77,16 @@ export const Highlights = () => {
           'Responsible for running and analyzing the weekly load tests for the Voicemail-to-Text product and generating analytics reports circulated amongst team and management.',
           'Implemented an automated pipeline that archived the logs and generated data visualizations that replaced the previous manual process.'
           
+        ]}
+      />
+      <Highlight
+        align={HighlightAlignment.Left}
+        color={'light'}
+        companyImageUrl={`${process.env.PUBLIC_URL}/assets/mcgill-logo.png`}
+        date="May 2013"
+        title="Freelance"
+        points={[
+          'Developed a computer vision pipeline for Materials Engineering grad students at McGill University using Python and OpenCV to analyze Scanning Electron Miscroscope images and calculate the volume of metallic crystals.'
         ]}
       />
     </div>
