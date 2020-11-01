@@ -68,7 +68,7 @@ export const Highlights = () => {
       />
       <Highlight
         color={'dark'}
-        companyImageUrl={`${process.env.PUBLIC_URL}/assets/nuance.png`}
+        companyImageUrl={`${process.env.PUBLIC_URL}/assets/nuance-logo.svg`}
         date="September 2013 - May 2014"
         title="Nuance Communications"
         link="https://www.nuance.com/index.html"
