@@ -19,12 +19,10 @@ export const Highlights = () => {
         link="https://www.automat.ai"
         linkTitle="www.automat.ai"
         points={[
-          'Software Engineer',
-          'Grown with the company from 6 people to 30+',
-          'Develop platforms to design conversation marketing chatbots',
-          'Deploying chatbots at scale',
+          'Designed UX and developed a web platform for building and deploying chatbots to various messaging services.',
+          'Architected and developed a custom chat platform and library supporting 1M+  conversations integrated directly on our customer’s websites.',
+          'Patented methodology for building AI-assisted, goal-driven, conversational chatbots.',
         ]}
-        skills={['UI/UX', 'QA', 'Design', 'React', 'Node', 'Typescript']}
       />
       <Highlight
         color={'light'}
@@ -34,37 +32,25 @@ export const Highlights = () => {
         link="https://www.lead-web.com"
         linkTitle="www.lead-web.com"
         points={[
-          'Software Engineer / Data Scientist',
-          'Build custom web apps for embedded touchscreen devices deployed across Ontario and Quebec',
-          "Built interactive experiences to augment existing information boards used by travellers at Montreal's Pierre Elliot Trudeau Airport and the City of Toronto's Bus Kiosks",
-          'Developed an Automated Dashboard for analytics data was turned into client reports and circulated among our company and our clients',
-        ]}
-        skills={['DataViz', 'QA', 'UI/UX']}
+          'Developed UI/UX for a real-time bus schedule app deployed by the City of Toronto used by ~150,000 daily bus riders.',
+          'Developed interactive touchscreen advertisements and games deployed at many Toronto-area bus stops and used by tens of thousands of users weekly.',
+          'Developed an internal analytics tool for generating live data visualizations for LeadWeb’s deployed applications.'
+]}
       />
       <Highlight
         align={HighlightAlignment.Left}
-        companyImageUrl={`${process.env.PUBLIC_URL}/assets/sds-logo.png`}
+        companyImageUrl={`${process.env.PUBLIC_URL}/assets/sds-logo.svg`}
         color={'dark'}
         date="August 2013 - November 2015"
         title="Silent Disco Squad"
         link="http://silentdiscosquad.com"
         linkTitle="www.silentdiscosquad.com"
         points={[
-          'Co-founder and Engineer',
-          'Built a social music application that organizes headphone danceparties in public spaces',
-          'Developed a distributed system for streaming synchronous live broadcasts',
-          'Prototyped mobile apps and chat experiences to upload and share digital media and messages between live streaming users',
-          'Grew the community from hundreds to tens of thousands of people dancing through the streets in almost 100 cities around the world',
-          'Participated in the McGill X-1 Accelerator - a 4 month long accelerator that provided officespace, mentorship, and capital',
-          'Built Ecstatic.fm, a tool that allowed users to collaboratively create music videos at danceparties',
-        ]}
-        skills={[
-          'CoFounder',
-          'Javascript/Node/iOS',
-          'UI/UX',
-          'Research',
-          'Infra',
-          'iOS',
+          'Produced music-sharing and event-organizing web platform with 30,000+ unique users.',
+          'Developed algorithms and infrastructure to simultaneously live stream music to live dance parties in nearly 100 cities.',
+          'Architected and developed a social companion app for uploading and sharing user-generated videos.',
+          'Developed algorithms and infrastructure to simultaneously live stream music to live dance parties in nearly 100 cities.',
+          'Created partnerships with dozens of organizations including Amnesty International and Unify.'
         ]}
       />
       <Highlight
@@ -75,12 +61,10 @@ export const Highlights = () => {
         link="https://www.nuance.com/index.html"
         linkTitle="wwww.nuance.com"
         points={[
-          'QA Software Engineering Intern',
-          'Automated and Analyzed the Weekly Load Test',
-          'Compiled and distributed weekly reports that were circulated among my teammembers and managers',
-          'Automated the report generation and built a dashboard using Kibana/ElasticSearch/Logstash',
+          'Responsible for running and analyzing the weekly load tests for the Voicemail-to-Text product and generating analytics reports circulated amongst team and management.',
+          'Implemented an automated pipeline that archived the logs and generated data visualizations that replaced the previous manual process.'
+          
         ]}
-        skills={['QA', 'UI/UX', 'DataViz']}
       />
     </div>
   );

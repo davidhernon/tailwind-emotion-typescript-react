@@ -113,7 +113,7 @@ export const Highlight: React.FC<{
   linkTitle?: string;
   title: string;
   points: string[];
-  skills: string[];
+  skills?: string[];
 }> = ({
   align = HighlightAlignment.Right,
   color = 'light',
@@ -123,7 +123,7 @@ export const Highlight: React.FC<{
   linkTitle,
   title,
   points,
-  skills,
+  skills = [],
 }) => {
   const targetRef = React.useRef<null | HTMLDivElement>(null);
   const [contentHeight, setContentHeight] = React.useState(450);
@@ -202,7 +202,7 @@ export const Highlight: React.FC<{
                 <li
                   key={point}
                   css={css`
-                    ${tw`text-lg max-w-xl lg:text-lg`}
+                    ${tw`max-w-xl`}
                   `}
                 >
                   {point}

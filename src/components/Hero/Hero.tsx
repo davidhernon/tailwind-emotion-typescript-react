@@ -142,6 +142,9 @@ const ContinueSVG = styled.a`
   @media screen and (max-width: 1024px) {
     left: 50%;
   }
+  @media screen and (max-width: 640px) {
+    display: none
+  }
 `;
 
 export const Hero = () => {
@@ -253,7 +256,7 @@ export const Hero = () => {
             >
               <div
                 css={css`
-                  ${tw`px-6 py-8 md:max-w-3xl md:mx-auto lg:max-w-full lg:py-0`}
+                  ${tw`px-6 py-8 md:max-w-3xl md:mx-auto md:mx-0 lg:max-w-full lg:py-0`}
                 `}
               >
                 <div
