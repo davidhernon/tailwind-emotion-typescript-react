@@ -15,7 +15,7 @@ export const Highlights = () => {
         color={'dark'}
         companyImageUrl={`${process.env.PUBLIC_URL}/assets/gbr-census.svg`}
         date="March 2020 - November 2020"
-        title="Volunteer Work and Travel"
+        title="Great Barrier Reef Census"
         link="https://greatreefcensus.org/"
         linkTitle="www.greatreefcensus.org"
         points={[
