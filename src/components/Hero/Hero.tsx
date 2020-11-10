@@ -143,7 +143,7 @@ const ContinueSVG = styled.a`
     left: 50%;
   }
   @media screen and (max-width: 640px) {
-    display: none
+    display: none;
   }
 `;
 
@@ -222,7 +222,10 @@ export const Hero = () => {
                     designing software tools to build chatbots at scale.
                   </SubHeadline>
                   <CTAContainer>
-                    <CTA target="_blank" href="https://stackoverflow.com/questions/51937086/how-do-i-link-to-local-pdf-file-in-a-create-react-app-project">
+                    <CTA
+                      target="_blank"
+                      href="https://davidhernonpersonal.s3.us-east-2.amazonaws.com/David_Hernon_Resume_2020.pdf"
+                    >
                       Resume
                     </CTA>
                     <CTA
